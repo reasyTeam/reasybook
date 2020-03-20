@@ -23,7 +23,9 @@
         "github-buttons@2.1.0",
 		"splitter",
         "simple-page-toc",
-		"copy-code-button"
+		"copy-code-button",
+        "anchor-navigation-ex",
+		"prism", "prism-themes"
 	],
 	"pluginsConfig": {
 		"github": {
@@ -44,6 +46,14 @@
         },
 		"theme-default": {
 			"showLevel": true
+		},
+        "anchor-navigation-ex": {
+			"showLevel":false
+        }, 
+		"prism": {
+			"css": [
+				"prismjs/themes/prism-solarizedlight.css"
+			]
 		}
 	},
     "title": "ReasyTeam",
