@@ -1,6 +1,6 @@
 # ReasyBook
 
-[@ReasyTeam](https://github.com/reasyTeam)公共资源文件使用说明书。
+[@ReasyTeam](https://github.com/reasyTeam)公共资源文件使用说明书。[https://reasyteam.github.io/reasybook](https://reasyteam.github.io/reasybook)
 
 
 
