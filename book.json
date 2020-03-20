@@ -1,0 +1,51 @@
+{
+    "title": "Reasy Team",
+    "description": "工具使用说明书",
+    "author": "moshang",
+    "output.name": "site",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "root": ".",
+    "links": {
+        "sidebar": {
+            "@ReasyTeam": "https://github.com/reasyTeam"
+        }
+    },
+    "structure": {
+        "readme": "introduce.md"
+    },
+    "plugins": [
+        "-lunr",
+        "-search",
+        "-highlight",
+        "-livereload",
+		"github",
+        "github-buttons@2.1.0",
+		"splitter",
+        "simple-page-toc",
+		"copy-code-button"
+	],
+	"pluginsConfig": {
+		"github": {
+			"url": "https://github.com/reasyTeam/reasybook"
+		},
+        "github-buttons": {
+            "repo": "reasyTeam/reasybook",
+            "types": [
+                "star",
+                "watch",
+                "fork"
+            ],
+            "size": "small"
+        },
+        "simple-page-toc": {
+            "maxDepth": 3,
+            "skipFirstH1": true
+        },
+		"theme-default": {
+			"showLevel": true
+		}
+	},
+    "title": "ReasyTeam",
+    "variables": {}
+}
