@@ -1,4 +1,4 @@
-{% raw %}
+
 
 # 翻译工具，Excel/Json 处理工具
 
@@ -53,6 +53,8 @@ b28-cli -h
 
 将`template`和`script`模块分开进行处理。`script`代码还是按照 JS 的逻辑进行处理。`template`的解析处理参考`vue`的`compiler`模块进行解析。首先遍历 html 节点提取翻译相关的属性和文本信息，包括词条的`start`和`end`位置索引，然后解析提取的信息，提取需要翻译的词条，同时将翻译后的词条对原`template`进行原地替换，最后输出替换后的 vue 文件。
 
+{% raw %}
+
 **对于含有翻译函数`_()`的表达式会直接提取，不包含翻译函数的表达式只有包含中文的情况下才会进行提取和翻译替换。纯英文词条默认不提取，以为无法区分是表达式还是词条。**
 
 默认的处理如下：
@@ -95,7 +97,9 @@ b28-cli -h
 </template>
 ```
 
-![处理结果](./img/vue.jpg)
+![处理结果](https://raw.githubusercontent.com/reasyTeam/b28-cli/master/img/vue.jpg)
+
+{% endraw %}
 
 ## 使用方式
 
@@ -368,6 +372,3 @@ module.exports = {
 - 添加 excel 同时转多列数据
 - 添加自动化测试用例
 
-## 
-
-{% endraw %}

@@ -19,7 +19,7 @@ npm run build
 
 ```
 
-## 目录结构 ##
+## 目录结构 
 
 ```
 Reasy-UI
@@ -121,16 +121,16 @@ Reasy-UI
 | hide()         |     隐藏组件     |            --            |   --   |
 | toggle()       |    显示/隐藏     |            --            |   --   |
 | changeTitle()  |    显示/隐藏     |            --            |   --   |
-| valChange() | 触发组件的数据校验onValidate，当校验成功后触发handleChangeEvents
- | -- | -- |
- | onValidate | 执行自定义数据校验逻辑和基础数据校验 | -- | -- |
- | handleChangeEvents | 执行组件数据改变后的自定义逻辑 | -- | -- |
+| valChange() | 触发组件的数据校验onValidate，当校验成功后触发handleChangeEvents | -- | -- |
+| onValidate | 执行自定义数据校验逻辑和基础数据校验 | -- | -- |
+| handleChangeEvents | 执行组件数据改变后的自定义逻辑 | -- | -- |
 | addValidateText(text) | 显示错误信息 | string | -- |
 | removeValidateText() | 移除错误提示信息| -- | -- |
-| bindValidateEvent(fc) | 绑定自定义校验   | function | -- | 
-| bindChangeEvent(fc) | 绑定自定义`change`事件 | function | -- | 
+| bindValidateEvent(fc) | 绑定自定义校验   | function | -- |
+| bindChangeEvent(fc) | 绑定自定义`change`事件 | function | -- |
 | unBindEvent(key) | 解绑事件 | 事件对应的key | -- |
-| 其它方法    | -- |  --  | 
+| 其它方法    | -- |  --  |
+
 > 强调说明：
 > 1. show，hide，toggle只做组件的显示隐藏处理，对组件的其它功能属性没有任何影响
 > 2. bindValidateEvent,bindChangeEvent参数的返回值同上面属性的介绍
@@ -138,11 +138,11 @@ Reasy-UI
 ### 流程图
 * 组件主逻辑
 
-![组件主逻辑](https://github.com/moshang-xc/gitskills/blob/master/share/reasy-ui1.jpg)
+![组件主逻辑](https://raw.githubusercontent.com/moshang-xc/blog/master/share/reasy-ui1.jpg)
 
 * 数据校验逻辑
 
-![数据校验逻辑](https://github.com/moshang-xc/gitskills/blob/master/share/reasy-ui2.jpg)
+![数据校验逻辑](https://raw.githubusercontent.com/moshang-xc/blog/master/share/reasy-ui2.jpg)
 
 ## 3. 调用形式（以FormInput为例）
 
@@ -181,19 +181,19 @@ $("#demo1").FormInput({
 >以上三种调用形式为常用的调用形式，其它调用形式暂不列出，仅供框架内部调用
 
 ## 4. 公共属性方法使用demo
-```
+```html
 <!-- html模板 -->
 <div id="tk" data-key="FormInput"></div>
 ```
 * 无标题
-```
+```js
 $("#tk").Rcomponent({
 	dataField:'username',
 	placeholder:"普通文本测试"
 });
 ```
 * 有标题
-```
+```js
 $("#tk").Rcomponent({
 	dataField:'username',
 	dataTitle:"普通文本",
@@ -201,7 +201,7 @@ $("#tk").Rcomponent({
 });
 ```
 * 有description描述信息
-```
+```js
 $("#tk").Rcomponent({
 	dataField:'username',
 	dataTitle:"普通文本",
@@ -210,7 +210,7 @@ $("#tk").Rcomponent({
 });
 ```
 * 自定义数据校验逻辑
-```
+```js
 $("#tk").Rcomponent({
 	dataField:'username',
 	dataTitle:"普通文本",
@@ -225,7 +225,7 @@ $("#tk").Rcomponent({
 });
 ```
 * 自定义change逻辑
-```
+```js
 $("#tk").Rcomponent({
 	dataField:'username',
 	dataTitle:"普通文本",
@@ -238,7 +238,7 @@ $("#tk").Rcomponent({
 });
 ```
 * add自定义校验逻辑，change逻辑
-```
+```js
 var $tk = $("#tk").Rcomponent({
 	dataField:'username',
 	dataTitle:"普通文本",
@@ -259,7 +259,7 @@ $tk.bindValidateEvent("change",function(){
 ---
 # 文本框组件
 支持普通文本，密码文本，指定的文本校验格式，只读状态与编辑状态切换
-```
+```html
 <!-- html模板 -->
 <input id="forminput" data-key="FormInput">
 ```
@@ -280,7 +280,7 @@ $tk.bindValidateEvent("change",function(){
 
 ##  使用
 ### 1. 普通文本
-```
+```js
 $("#formInput1").Rcomponent({
 	dataKey:"FormInput",
 	dataField:'username',
@@ -289,7 +289,7 @@ $("#formInput1").Rcomponent({
 });
 ```
 ### 2. 密码输入框
-```
+```js
 $("#formInput2").Rcomponent({
 	dataKey:"FormInput",
 	dataField:'username',
@@ -299,7 +299,7 @@ $("#formInput2").Rcomponent({
 });
 ```
 ### 3. 密码输入框 - hasEyes:true
-```
+```js
 $("#formInput3").Rcomponent({
 	dataKey:"FormInput",
 	dataField:'username',
@@ -310,7 +310,7 @@ $("#formInput3").Rcomponent({
 });
 ```
 ### 4. 只读模式
-```
+```js
 $("#formInput4").Rcomponent({
 	dataKey:"FormInput",
 	dataField:'username',
@@ -320,7 +320,7 @@ $("#formInput4").Rcomponent({
 });
 ```
 ### 5. 切换模式, defaultText，switchCallBack
-```
+```js
 $("#formInput5").Rcomponent({
 	dataKey:"FormInput",
 	dataField:'username',
@@ -335,7 +335,7 @@ $("#formInput5").Rcomponent({
 });
 ```
 ### 6. 数据校验模式
-```
+```js
 $("#formInput6").Rcomponent({
 	dataKey:"FormInput",
 	dataField:'username',
@@ -345,7 +345,7 @@ $("#formInput6").Rcomponent({
 });
 ```
 ### 7. removeSpace，focusCallBack
-```
+```js
 $("#formInput7").Rcomponent({
 	dataKey:"FormInput",
 	dataField:'username',
@@ -363,7 +363,7 @@ $("#formInput7").Rcomponent({
 ---
 # 下拉框组件(FormSelect)
 支持下拉框选项的添加，删除，修改等操作
-```
+```html
 <!-- html模板 -->
 <select id="formselect" data-key="FormSelect"></select>
 ```
@@ -381,7 +381,7 @@ $("#formInput7").Rcomponent({
 
 ##  使用
 ### 1. 基础使用-selectArray为array
-```
+```js
 var $ts = $("#formselect1").Rcomponent({
 	dataTitle:"selectArray为数组",
 	dataField:"formselect1",
@@ -393,7 +393,7 @@ var $ts = $("#formselect1").Rcomponent({
 });
 ```
 ### 2. selectArray为object
-```
+```js
 $("#formselect2").Rcomponent({
 	dataTitle:"selectArray为对象",
 	dataField:"formselect2",
@@ -405,13 +405,13 @@ $("#formselect2").Rcomponent({
 });
 ```
 ### 3. removeItem
-```
+```js
 $ts.removeItem("test2");
 $ts.removeItem(["test3","test4"]);
 ```
 
 ### 4. addIem
-```
+```js
 $ts.addItem("test5");
 $ts.addItem("test6","test哈哈");
 $ts.addItem({a:1,b:2});
@@ -421,7 +421,7 @@ $ts.addItem({a:1,b:2});
 ---
 # 多文本输入框组件(FormMiltiInput)
 根据不同的需求配置不同个数的文本输入框
-```
+```html
 <!-- html模板 -->
 <div id="formMiltiInput" data-key="FormMiltiInput"></div>
 ```
@@ -437,14 +437,14 @@ $ts.addItem({a:1,b:2});
 
 ##  使用
 ### 1. 基础使用
-```
+```js
 $("#formMultiInpit").Rcomponent({
     dataKey: "FormMultiInput",
     inputCount:4
 });
 ```
 ### 2. text
-```
+```js
 $("#formMultiInpit1").Rcomponent({
     dataKey: "FormMultiInput",
     inputCount:2,
@@ -458,7 +458,7 @@ $("#formMultiInpit1").Rcomponent({
 });
 ```
 ### 3. inputCount,joiner
-```
+```js
 $("#formMultiInpit2").Rcomponent({
     dataKey: "FormMultiInput",
     inputCount:4,
@@ -468,7 +468,7 @@ $("#formMultiInpit2").Rcomponent({
 ```
 
 ### 4. inputCfg
-```
+```js
 $("#formMultiInpit3").Rcomponent({
     dataKey: "FormMultiInput",
     inputCfg:[
@@ -484,7 +484,7 @@ $("#formMultiInpit3").Rcomponent({
 ---
 # 百分比组件(FormPercent)
 拖拽进行百分值的设定
-```
+```html
 <!-- html模板 -->
 <div id="formPercent" data-key="FormPercent"></div>
 ```
@@ -498,7 +498,7 @@ $("#formMultiInpit3").Rcomponent({
 
 ##  使用
 ### 1. 基础使用
-```
+```js
  $("#formPercent").Rcomponent({
     dataKey: "FormPercent",
     start:100,
@@ -508,7 +508,7 @@ $("#formMultiInpit3").Rcomponent({
 ```
 
 ### 2. 设定默认值
-```
+```js
 $("#formPercent1").Rcomponent({
     dataKey: "FormPercent",
     end:220,
@@ -518,7 +518,7 @@ $("#formPercent1").Rcomponent({
 ```
 
 ### 3. 起始值大于结束值
-```
+```js
 $("#formPercent2").Rcomponent({
     dataKey: "FormPercent",
     start:160,
@@ -532,7 +532,7 @@ $("#formPercent2").Rcomponent({
 ---
 # 上传组件(FormUpload)
 文件上传组件
-```
+```html
 <!-- html模板 -->
 <select id="formselect" data-key="FormSelect"></select>
 ```
@@ -550,7 +550,7 @@ $("#formPercent2").Rcomponent({
 
 ##  使用
 ### 1. 基础使用
-```
+```js
 $("#formUpload").Rcomponent({
     dataKey: "FormUpload",
     submitUrl:"xxx",
@@ -561,7 +561,7 @@ $("#formUpload").Rcomponent({
 ```
 
 ### 2. showFileText
-```
+```js
 $("#formUpload").Rcomponent({
     dataKey: "FormUpload",
     submitUrl:"xxx",
@@ -570,7 +570,7 @@ $("#formUpload").Rcomponent({
 ```
 
 ### 3. beforeUpload
-```
+```js
 $("#formUpload1").Rcomponent({
     dataKey: "FormUpload",
     submitUrl:"xxx",
@@ -588,7 +588,7 @@ $("#formUpload1").Rcomponent({
 ---
 # checkboxlist组件（FormCheckList）
 多个checkbox排列显示，支持添加和删除项
-```
+```html
 <!-- html模板 -->
 <div id="formchecklist" data-key="FormCheckList"></div>
 ```
@@ -603,7 +603,7 @@ $("#formUpload1").Rcomponent({
 | addItem    | 增加可选项 | string，array或object |
 ##  使用
 ### 1. 基础使用-selectArray为array
-```
+```js
 var $tc = $("#formchecklist").Rcomponent({
 	dataTitle:"formchecklist",
 	dataField:"formchecklist",
@@ -615,7 +615,7 @@ var $tc = $("#formchecklist").Rcomponent({
 });
 ```
 ### 2. selectArray为object
-```
+```js
 var $tc = $("#formchecklist").Rcomponent({
 	dataTitle:"formchecklist",
 	dataField:"formchecklist",
@@ -627,12 +627,12 @@ var $tc = $("#formchecklist").Rcomponent({
 });
 ```
 ### 3. removeItem(key)
-```
+```js
 $tc.removeItem("test2");
 $tc.removeItem(["test3","test4"]);
 ```
 ### 4. addItem(key)
-```
+```js
 $tc.addItem("test5");
 $tc.addItem("test6","test哈哈");
 ```
@@ -642,7 +642,7 @@ $tc.addItem("test6","test哈哈");
 ---
 # radiolist组件(FormRadioList)
 支持下拉框选项的添加，删除，修改等操作
-```
+```html
 <!-- html模板 -->
 <div id="formradiolist" data-key="FormRadioList"></div>
 ```
@@ -657,7 +657,7 @@ $tc.addItem("test6","test哈哈");
 | addItem    | 增加可选项 | string，array或object |
 ##  使用
 ### 1. 基础使用-selectArray为array
-```
+```js
 var $tr = $("#formradiolist").Rcomponent({
 	dataTitle:"FormRadioList",
 	dataField:"FormRadioList",
@@ -669,7 +669,7 @@ var $tr = $("#formradiolist").Rcomponent({
 });
 ```
 ### 2. selectArray为object
-```
+```js
 var $tr = $("#formradiolist").Rcomponent({
 	dataTitle:"FormRadioList",
 	dataField:"FormRadioList",
@@ -678,12 +678,12 @@ var $tr = $("#formradiolist").Rcomponent({
 });
 ```
 ### 3. removeItem(key)
-```
+```js
 $tc.removeItem("test2");
 $tc.removeItem(["test3","test4"]);
 ```
 ### 4. addItem(key, value)
-```
+```js
 $tc.addItem("test5");
 $tc.addItem("test6","test哈哈");
 ```
@@ -693,7 +693,7 @@ $tc.addItem("test6","test哈哈");
 ---
 # 开关组件（FormCheckbox）
 支持on，off两种状态
-```
+```html
 <!-- html模板 -->
 <div id="formcheckbox" data-key="FormCheckbox"></div>
 ```
@@ -704,7 +704,7 @@ $tc.addItem("test6","test哈哈");
 
 ##  使用
 ### 1. 基础使用--无文本
-```
+```js
 var $tcb = $("#formcheckbox").Rcomponent({
 	dataTitle:"FormCheckbox",
 	dataField:"formcheckbox",
@@ -714,7 +714,7 @@ var $tcb = $("#formcheckbox").Rcomponent({
 });
 ```
 ### 2. 基础使用--有文本
-```
+```js
 var $tcb = $("#formcheckbox").Rcomponent({
 	dataTitle:"FormCheckbox",
 	dataField:"formcheckbox",
@@ -729,7 +729,7 @@ var $tcb = $("#formcheckbox").Rcomponent({
 
 ---
 # 自定义下拉组件（FormDropDownList）
-```
+```html
 <!-- html模板 -->
 <div id="formDropDownList" data-key="FormDropDownList"></div>
 ```
@@ -745,7 +745,7 @@ var $tcb = $("#formcheckbox").Rcomponent({
 
 ## 使用
 ### 1. selectArray
-```
+```js
 var $tcb = $("#formDropDownList").Rcomponent({
     dataValueType:"num",
     showSelfText:QOSTEXT[qosPolicy],
@@ -766,7 +766,7 @@ var $tcb = $("#formDropDownList").Rcomponent({
 });
 ```
 ### 2. dataOptions
-```
+```js
 var $tcb = $("#formDropDownList").Rcomponent({
     dataValueType:"num",
     customText:_("Manual (Unit: KB/s)"),
@@ -775,7 +775,7 @@ var $tcb = $("#formDropDownList").Rcomponent({
 });
 ```
 ### 3. clickCallBack
-```
+```js
 var $tcb = $("#formDropDownList").Rcomponent({
     dataValueType:"num",
     customText:_("Manual (Unit: KB/s)"),
@@ -791,7 +791,7 @@ var $tcb = $("#formDropDownList").Rcomponent({
 });
 ```
 ### 4. showSelfText
-```
+```js
 var $tcb = $("#formDropDownList").Rcomponent({
     dataValueType:"num",
     showSelfText:QOSTEXT[qosPolicy],
@@ -800,7 +800,7 @@ var $tcb = $("#formDropDownList").Rcomponent({
 });
 ```
 ### 5. customText
-```
+```js
 var $tcb = $("#formDropDownList").Rcomponent({
     customText:_("Manual (Unit: KB/s)"),
     selectArray:{0:_("No limit"), 32:"32 KB/s", 64:"64 KB/s", 128:"128 KB/s"},
@@ -811,7 +811,7 @@ var $tcb = $("#formDropDownList").Rcomponent({
 });
 ```
 ### 6. focusCallBack
-```
+```js
 var $tcb = $("#formDropDownList").Rcomponent({
     dataValueType:"num",
     customText:_("Manual (Unit: KB/s)"),
@@ -827,7 +827,7 @@ var $tcb = $("#formDropDownList").Rcomponent({
 
 ---
 # 日历组件（FormCalendar）
-```
+```html
 <!-- html模板 -->
 <input type="text" id="formCalendar" data-key="FormCalendar">
 ```
@@ -841,7 +841,7 @@ var $tcb = $("#formDropDownList").Rcomponent({
 
 ##  使用
 ### 1. 基础使用
-```
+```js
 var $tcb = $("#formCalendar").Rcomponent({
 	dataTitle:"日历组件",
 	dataField:"formCalendar",
@@ -854,7 +854,7 @@ var $tcb = $("#formCalendar").Rcomponent({
 
 ---
 # 选项卡组件（FormTab）
-```
+```html
 <!-- html模板 -->
 <div id="formTab" data-key="FormTab"></div>
 ```
@@ -865,7 +865,7 @@ var $tcb = $("#formCalendar").Rcomponent({
 
 ##  使用
 ### 1. 基础使用
-```
+```js
 var$("#formtab").Rcomponent({
     selectArray:{1:_("Online Devices"), 2:_("Blacklist")},
     dataValueType:"num",
@@ -907,7 +907,7 @@ var$("#formtab").Rcomponent({
 
 ##  使用
 ### 1. 基础使用
-```
+```js
 $.FormMessage({
     message:"消息",
     callback：function(){
@@ -939,7 +939,7 @@ $.FormMessage({
 
 ## 使用
 ### 1. 基础使用
-```
+```js
 $.modalDialog({
 	title:'test',
 	content:'<div style="height:200px;width:200px;"></div>',
@@ -958,7 +958,7 @@ $.modalDialog({
 
 # table组件（FormTable）
 
-```
+```html
 <!-- html模板 -->
 <table id="FormTable"></table>
 ```
@@ -1022,7 +1022,7 @@ $.modalDialog({
 
 ##  使用
 ### 1. 基础使用
-```
+```js
 <!--html-->
 <table id="formTablenormal">
 	<thead>
@@ -1047,11 +1047,11 @@ $("#formTablenormal").TablePage({
 ```
 
 ### 2. 配置使用-配置信息加载 自定义列头显示,列宽设置
-```
+```html
 <!--html-->
 <table id="formTable"></table>
 ```
-```
+```js
 $("#formTable").TablePage({
 	data:tableData,
 	columns:[
@@ -1065,7 +1065,7 @@ $("#formTable").TablePage({
 });
 ```
 ### 3. 重写列数据值
-```
+```js
 $("#formTable").TablePage({
 	data:tableData,
 	columns:[
@@ -1081,7 +1081,7 @@ $("#formTable").TablePage({
 });
 ```
 ### 4. 显示复选框 
-```
+```js
 $("#formTable").TablePage({
 	data:tableData,
 	showCheckbox:true,
@@ -1097,7 +1097,7 @@ $("#formTable").TablePage({
 });
 ```
 ### 5. 显示操作按钮
-```
+```js
 $("#formTable").TablePage({
 	data:tableData,
     showCheckbox:true,
@@ -1134,7 +1134,7 @@ $("#formTable").TablePage({
 });
 ```
 ### 6. FormTable排序
-```
+```js
 $("#formTable").FormTable({
     data:tableData,
     sortFields:["sysLogTime","ID"],// 定义属性
@@ -1166,7 +1166,7 @@ $("#formTable").FormTable({
 });
 ```
 ### 7. FormTable与其他组件混合使用
-```
+```js
 $("#customTable").FormTable({
     requestUrl:"/goform/module", //请求地址
     requestOpt:{getQosUserList:{type:1}, getQosPolicy:""}, //请求参数
@@ -1327,11 +1327,11 @@ $("#customTable").FormTable({
 ## 流程图
 数据校验逻辑
 
-![数据校验逻辑](https://github.com/moshang-xc/gitskills/blob/master/share/reasy-ui3.jpg)
+![数据校验逻辑](https://raw.githubusercontent.com/moshang-xc/blog/master/share/reasy-ui3.jpg)
 
 ##  使用
 ### 1. 基础使用
-```
+```js
 <!--html-->
 <div id="text"></div>
     <div id="authUserModal" class="form-wrap">

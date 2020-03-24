@@ -6,4 +6,4 @@ if exist docs (
 	rd /s/q docs
 )
 ren _book docs
-pause
+exit
