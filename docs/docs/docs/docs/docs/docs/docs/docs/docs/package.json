@@ -1,0 +1,19 @@
+{
+  "name": "reasybook",
+  "version": "1.0.0",
+  "description": "[@ReasyTeam](https://github.com/reasyTeam)公共资源文件使用说明书。",
+  "main": "index.js",
+  "scripts": {
+    "build": "gitbook build && rename.bat"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reasyTeam/reasybook.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reasyTeam/reasybook/issues"
+  },
+  "homepage": "https://github.com/reasyTeam/reasybook#readme"
+}
