@@ -27,7 +27,9 @@
 
 
 
-* [组内资源](reasyteam/README.md)
+* [其它资源](reasyteam/README.md)
 
 
+
+- [培训计划](other/training.md)
 
