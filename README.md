@@ -7,11 +7,11 @@
 # 使用说明
 
 ```
-# clone 
-git colone https://github.com/reasyTeam/reasybook
+# clone
+git clone https://github.com/reasyTeam/reasybook
 
 # 安装gitbook
-npm i gitbook -g
+npm i gitbook-cli -g
 
 # 安装插件
 cd reasybook
@@ -22,7 +22,7 @@ gitbook install
 gitbook serve
 
 # 打包发布更新
-npm run build 
+npm run build
 ## 或者
 gitbook build
 ren _book docs
