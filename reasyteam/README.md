@@ -2,12 +2,7 @@
 
 ## 账号资源
 
-| 类型   | 用户名    | 邮箱                | 密码      |
-| ------ | --------- | ------------------- | --------- |
-| Github | reasyteam | pengjuanli@tenda.cn | reasy.123 |
-| npm.js | reasyteam | pengjuanli@tenda.cn | reasy.123 |
-
-> 其中**用户名**和**邮箱**都可用作登录账号
+请访问[CI服务器](http://192.168.99.17/)查看
 
 ## 流程
 
